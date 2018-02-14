@@ -519,7 +519,7 @@ a:focus {
 @media (max-width: 600px) {
 
   #footer li {
-    flex-basis: 100%
+    flex-basis: 100%;
     flex-direction: column;
   }
 

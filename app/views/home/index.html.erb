@@ -1,12 +1,13 @@
 <div data-spy="scroll" data-target="#navbar" data-offset="0">
     <header id="header" role="banner">
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" id="toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#"></a>
-          <ul class=" navbar-nav my-2 my-lg-0">
+        <a class="navbar-brand" href="#"><img src="https://i.imgur.com/aEpnGkG.png"></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class=" navbar-nav ml-auto">
             <li><img src="<%=asset_path("home/language.png")%>"></li>
             <li class="nav-item list-item"><a href="#works">¿Cómo funciona?</a></li>
             <li class="nav-item list-item"><a href="#new_event">Crear Evento</a></li>
@@ -19,20 +20,11 @@
 
     <section id="main-slider" class="carousel">
         <div class="carousel-inner">
-            <div class="item active">
-                <div class="carousel-content">
-                  <img src="<%=asset_path("home/slider-preview.png")%>">
-                </div>
+            <div class="item active" style="background-image:url(https://placeimg.com/640/480/animals);">
             </div><!--/.do this inside an each for multiples objects on slider-->
             <div class="item">
-                <div class="carousel-content">
-                  <img src="<%=asset_path("home/slider-preview.png")%>">
-                </div>
             </div><!--/.do this inside an each for multiples objects on slider-->
             <div class="item">
-                <div class="carousel-content">
-                  <img src="<%=asset_path("home/slider-preview.png")%>">
-                </div>
             </div>
         </div>
         <a class="prev" href="#main-slider" data-slide="prev"><i class="icon-angle-left"></i></a>
@@ -41,12 +33,14 @@
 
     <section id="searcher">
       <div class="container-fluid">
-        <h1> Busca tus eventos en cualquier lugar de la ciudad </h1>
+        <div class="row">
+          <h2 class="col-12"> Busca tus eventos en cualquier lugar de la ciudad </h2>
+        </div>
         <form class="form-inline">
-          <div class="form-group col-4 mb-2">
+          <div id="search-event" class="form-group col-12 col-sm-5">
             <input class="form-control underline-input" placeholder="Nombre del evento que buscas" type="text">
           </div>
-          <div class="form-group col-4 mb-2">
+          <div class="form-group col-12 col-sm-2">
             <label for="category-select"</label>
             <select class="form-control" id="category-select" >
               <option> Categoría </option>
@@ -56,15 +50,19 @@
               <option> Opción 4 </option>
             </select>
           </div>
-          <div class="form-group col-4 mb-2">
+          <div class="form-group col-12 col-sm-2">
             <label for=date-select"</label>
             <select class="form-control" id="date-select" >
+              <option> Fecha <option>
               <option> Enero 2018</option>
               <option> Febrero 2018</option>
               <option> Marzo 2018</option>
               <option> Abril 2018</option>
               <option> Mayo 2018</option>
             </select>
+          </div>
+          <div class="col-12 col-sm-3">
+            <button type="submit" class="btn btn-secondary btn-biciq red">Buscar</button>
           </div>
         </form>
       </div>
@@ -77,6 +75,10 @@
           <div class="events-box">
             <img src="https://placeimg.com/640/480/tech">
             <div class="events-box-body"> 
+              <h4>Curso de meditación.<h4>
+              <h5>Salud y bienestar<h5>
+              <span>Diciembre 29 - 2017</span>
+              <span>Parque Simón Bolivar</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -87,9 +89,14 @@
           <div class="events-box">
             <img src="https://placeimg.com/640/480/animals">
             <div class="events-box-body"> 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h4>Curso de meditación.<h4>
+              <h5>Salud y bienestar<h5>
+              <span>Diciembre 29 - 2017</span>
+              <span>Parque Simón Bolivar</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
           </div>
         </div>
@@ -97,6 +104,10 @@
           <div class="events-box">
             <img src="https://placeimg.com/640/480/nature">
             <div class="events-box-body"> 
+              <h4>Curso de meditación.<h4>
+              <h5>Salud y bienestar<h5>
+              <span>Diciembre 29 - 2017</span>
+              <span>Parque Simón Bolivar</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -107,6 +118,10 @@
           <div class="events-box">
             <img src="https://placeimg.com/640/480/people">
             <div class="events-box-body"> 
+              <h4>Curso de meditación.<h4>
+              <h5>Salud y bienestar<h5>
+              <span>Diciembre 29 - 2017</span>
+              <span>Parque Simón Bolivar</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -114,58 +129,93 @@
           </div>
         </div>
       </div>
+      <div class="row more-events">
+        <div class="col-12 col-sm-10">
+          <a href="www.google.com"><button type="button" class="btn btn-secondary btn-biciq red"> Ver más eventos </button></a>
+        </div>
+      </div>
     </section>
 
     <section id="do-it-yourself" class="container-fluid">
-      <div class="section-head">
-        <h1>Crea tu propio evento. ¡Fácil y Gratis!</h1>
-        <h4>Todo lo que necesitas para organizar tu evento, vende entradas y controla el registro de cualquier tipo de evento</h4>
+      <div class="col-12 col-sm-7 section-head">
+        <h1 class="col-12 col-sm-12">Crea tu propio evento. ¡Fácil y Gratis!</h1>
+        <h4 class="col-5 col-sm-7">Todo lo que necesitas para organizar tu evento, vende entradas y controla el registro de cualquier tipo de evento</h4>
       </div>
-      <div class="section-actions">
+      <div class="row section-actions">
+        <div class="col-12 col-sm-4"> 
+          <img src="<%=asset_path("new_home/publish.png")%>">
+          <h5>Publica</h5>
+          <p>Publica tu evento en Biciq para aumentar asistencias y ventas</p>
+        </div>
+        <div class="col-12 col-sm-4"> 
+          <img src="<%=asset_path("new_home/calendar.png")%>">
+          <h5>Crea</h5>
+          <p>Personaliza la página con los detalles del evento para publicarlo y vender entradas</p>
+        </div>
+        <div class="col-12 col-sm-4"> 
+          <img src="<%=asset_path("new_home/share.png")%>">
+          <h5>Invita</h5>
+          <p>Comparte el link de tu página biciq con amigos y conocidos en tus redes sociales</p>
+        </div>
+      </div>
+      <div class="yourself-options">
+        <div class="row">
+          <div class="col-12 col-sm-4"> 
+            <button type="button" class="btn btn-secondary btn-biciq red"> Crear evento </button>
+          </div>
+          <hr>
+          <div class="col-12 col-sm-4"> 
+            <button type="button" class="btn btn-secondary btn-biciq"> Aprender más</button>
+          </div>
+          <hr>
+          <div class="col-12 col-sm-4"> 
+            <button type="button" class="btn btn-secondary btn-biciq"> Precios </button>
+          </div>
+          <hr>
+        </div>
       </div>
     </section>
 
     <footer id="footer">
-      <ul>
-        <li class="footer-info">
-            <h4>Usar Biciq</h4>
-            <p>Vender boletos en línea</p>
-            <p>Buscar eventos para asistir</p>
-            <p>Cómo funciona</p>
-            <p>FAQ</p>
+      <ul class="row">
+        <li class="col-sm-3 col-12">
+          <h4>Usar Biciq</h4>
+          <p><a href="https://biciq.com/events/new?locale=es">Vender boletos en línea</a></p>
+          <p><a href="https://biciq.com/?locale=es">Buscar eventos para asistir</a></p>
+          <p><a href="https://biciq.com/how_it_works?locale=es">Cómo funciona</a></p>
+          <p><a href="https://biciq.com/faq?locale=es">FAQ</a></p>
+          <hr>
         </li>
-        <li class="footer-info">
-            <h4>Registrados</h4>
-            <p>Iniciar Sesión</p>
-            <p>Registrarse con Biciq</p>
-            <p>Ver mis eventos</p>
-            <p>Suscribirse a la lista de correo</p>
+        <li class="col-sm-3 col-12">
+          <h4>Registrados</h4></a>
+          <p><a href="https://biciq.com/sign_in?locale=es">Iniciar Sesión</a></p>
+          <p><a href="https://biciq.com/sign_up?locale=es">Registrarse con Biciq</a></p>
+          <p><a href="https://biciq.com/dashboard?locale=es">Ver mis eventos</a></p>
+          <p><a href="https://biciq.com/sign_up?locale=es">Suscribirse a la lista de correo</a></p>
+          <hr>
         </li>
-        <li class="footer-info">
-            <h4>Acerca de</h4>
-            <p>Quiénes Somos</p>
-            <p>Seguridad</p>
-            <p>Privacidad</p>
-            <p>Trabajar con nosotros</p>
-            <p>Terminos y condiciones</p>
+        <li class="col-sm-3 col-12">
+          <h4>Acerca de</h4>
+          <p><a href="https://biciq.com/who_we_are?locale=es"><p>Quiénes Somos</a></p>
+          <p><a href="https://biciq.com/security?locale=es"><p>Seguridad</a></p>
+          <p><a href="https://biciq.com/privacy?locale=es"><p>Privacidad</a></p>
+          <p><a href="https://biciq.com/work_with_us?locale=es"><p>Trabajar con nosotros</a></p>
+          <p><a href="https://biciq.com/terms?locale=es"><p>Terminos y condiciones</a></p>
+          <p><a href="www.sic.gov.co">www.sic.gov.co</p></a>
+          <hr>
         </li>
-        <li class="footer-info">
-            <h4>Contactenos</h4>
-            <p>Twitter</p>
-            <p>Facebook</p>
-            <p>Instagram</p>
-            <p>Email</p>
-            <p>Bogotá - 654 0770</p>
+        <li class="col-sm-3 col-12">
+          <h4>Contactenos</h4>
+          <p><a href="http://twitter.com/biciqeventos">Twitter</a></p>
+          <p><a href="https://www.facebook.com/biciq">Facebook</a></p>
+          <p><a href="https://www.instagram.com/biciq/">Instagram</a></p>
+          <p><a href="https://biciq.com/contact?locale=es">Email</a></p>
+          <p><a>Bogotá - 654 0770</a></p>
+          <hr>
         </li>
       </ul>
       <div class="footer-logo">
         <img src="images/logo-footer.png">
       </div>
     </footer><!--/#footer-->
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
 </div>

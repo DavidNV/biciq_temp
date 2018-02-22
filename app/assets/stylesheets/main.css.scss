@@ -315,18 +315,9 @@ a:focus {
 .navbar-default .navbar-nav > li > a > i {
   display: inline-block;
 }
-.navbar-collapse .navbar-nav > li.active > a,
-.navbar-collapse .navbar-nav > li.active:focus > a,
-.navbar-collapse .navbar-nav > li.active:hover > a,
-.navbar-collapse .navbar-nav > li:hover > a,
-.navbar-collapse .navbar-nav > li:focus > a,
-.navbar-collapse .navbar-nav > li.active > a:focus,
-.navbar-collapse .navbar-nav > li.active:focus > a:focus,
-.navbar-collapse .navbar-nav > li.active:hover > a:focus,
-.navbar-collapse .navbar-nav > li:hover > a:focus,
-.navbar-collapse .navbar-nav > li:focus > a:focus {
-  background-color: #ff6666;
-  color: #fff;
+
+a#language {
+  color: #1E90FF
 }
 
 #searcher {
@@ -339,7 +330,6 @@ a:focus {
   max-width: 200px;
   font-weight: 600px;
 }
-
 
 #searcher .container-fluid {
   text-align: center;
@@ -398,7 +388,12 @@ a:focus {
   border-bottom: 2px solid #CCC;
 }
 
+#events .semibold{
+  font-weight: 600;
+}
+
 #events h1 {
+  color: #ff6666;
   margin: 40px;
 }
 
@@ -513,7 +508,7 @@ a:focus {
 
 #footer {
   display: flex;
-  background-color: #C6C6C6;
+  background-color: #606060;
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;

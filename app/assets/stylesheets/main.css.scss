@@ -59,6 +59,14 @@ a:focus {
   color: #fff;
 }
 
+.btn.btn-biciq.red.login-btn {
+  margin: 40px 6px;
+  background-color: #ff6666;
+  color: #fff;
+  flex-basis: 75%;
+  margin-left: 13%;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -318,6 +326,47 @@ a:focus {
 
 a#language {
   color: #1E90FF
+}
+
+.login-modal{
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column; 
+}
+
+.modal-body {
+    max-height: 800px;
+}
+
+.modal-backdrop {
+   background-color: white;
+}
+
+.login-modal .form-inline .form-group .underline-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #CCC;
+  color: #555;
+  box-sizing: border-box;
+  padding: 10px 0px;
+  position: relative;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+::placeholder{
+  color: #CCC;
+}
+
+.login-modal img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  margin-top: 40px;
 }
 
 #searcher {

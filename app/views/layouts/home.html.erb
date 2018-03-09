@@ -13,8 +13,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <header id="header" role="banner">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" id="toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="https://i.imgur.com/aEpnGkG.png"></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class=" navbar-nav ml-auto">
+            <li class="nav-item"><a href="#works">¿Cómo funciona?</a></li>
+            <li class="nav-item list-item"><%= link_to("Crear evento", new_event_path)%></li>
+            <li class="nav-item list-item"><a href="#events">Mis Eventos</a></li>
+            <li class="nav-item list-item"><a data-toggle="modal" data-target=".login-modal">Iniciar sesión</a></li>
+            <li class="nav-item list-item"><!--img src="<%=asset_path("home/language.png")%>"--><a id="language">EN</a></li>
+          </ul >
+        </div>
+      </nav>
+    </header><!--/#header-->
+
+    <div class="modal login-modal" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="container">
+            <img src=<%=asset_path("logo.png")%>>
+            <form class="form-inline">
+              <div class="form-group col-12 col-sm-12">
+                <input class="form-control underline-input" type="text" placeholder="Usuario" name="user" required>
+              </div>
+              <div class="form-group col-12 col-sm-12">
+                <input class="form-control underline-input" type="password" placeholder="Contraseña" name="password" required>
+              </div>
+              <button class="btn btn-secondary btn-biciq red login-btn" type="submit">INGRESAR</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
